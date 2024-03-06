@@ -1,0 +1,282 @@
+/*Agregamos propiedades que usaremos en todo el proyecto*/
+:root{
+    --fondo: #F3F5FC;
+    --colorFuente: #0A3871;
+    --secundario: #ffce00;
+    --negro: #000;
+    --blanco: #fff;
+}
+
+/*Definimos globales*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+   background-color: var(--fondo); 
+   font-size: 1.6rem;
+   line-height: 1.5;
+   font-family: var(--fuentePrincipal);
+}
+
+header{
+    margin-left: -2rem;
+    margin-top: 2rem;
+}
+
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.entradaTextoUsuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 4rem;
+}
+/*Estilos al textarea*/
+#capturaTexto{
+    border: none;
+    resize: none;
+    background-color: var(--fondo);
+    color: var(--colorFuente);
+    font-size: 3rem;
+    font-weight: bold;
+    height: 20rem;
+    width: 90%;
+    margin-left: 2rem;
+   
+    
+}
+
+#capturaTexto:focus{
+    outline: none;
+}
+::placeholder{
+    color: var(--colorFuente);
+
+}
+
+/*estilos a la advertencia*/
+.advertencia{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 90%;
+}
+
+/*estilo a los botones*/
+.botones{
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.encriptar{
+    background-color: var(--colorFuente);
+    color: var(--blanco);
+    width: 90%;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    transition: 1s;
+}
+
+.encriptar:hover{
+    background-color: #0e4f9f;
+}
+
+.desencriptar{
+    background-color: var(--fondo);
+    color: var(--colorFuente);
+    width: 90%;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: solid var(--colorFuente);
+    transition: 1s;
+}
+
+.desencriptar:hover{
+    background-color: #b6b6b6;
+}
+
+/*Estilos a la salida del texto*/
+
+.salidaTextoUsuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 25rem;
+    background-color: var(--blanco);
+    border-radius: 2rem;
+    -webkit-box-shadow: 1px 1px 24px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 24px 7px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 24px 7px rgba(0,0,0,0.75);
+    margin-top: 3rem;
+}
+
+.textoEncriptado{
+    color: var(--colorFuente);
+    font-weight: bold;
+}
+
+.textoPrincipal{
+    font-size: 3rem;
+    line-height: 1;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.textoSecundario{
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    color: gray;margin-bottom: 2rem;
+    margin-bottom: 20rem;
+}
+
+.btn-copiar{
+    background-color: var(--fondo);
+    color: var(--colorFuente);
+    width: 50%;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: solid var(--colorFuente);
+    margin-bottom: 3rem;
+    cursor: pointer;
+    margin-top: -20rem;
+}
+
+.btn-copiar1{
+    color: var(--blanco);
+    width: 50%;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: solid var(--colorFuente);
+    margin-bottom: 3rem;
+    cursor: pointer;
+    margin-top: -20rem;
+    background-color: #0A3871;
+}
+
+.textoEncriptado{
+    font-size: 1.5rem;
+    text-align: center;
+    height: 30rem;
+    margin-top: 2rem;
+}
+/*Tablet*/
+@media (min-width: 768px) {
+    #capturaTexto{
+        height: 50rem;
+    }
+
+    .botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .salidaTextoUsuario{
+        height: 25rem;
+    }
+
+    .textoPrincipal{
+        font-size: 4rem;
+    }
+
+    .textoSecundario{
+        font-size: 3rem;
+    }
+
+
+}
+
+@media (min-width: 1000px) {
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .entradaTextoUsuario{
+        width: 65%;
+    }
+
+    .salidaTextoUsuario{
+        width: 30%;
+        height: 70rem;
+        margin-top: -2rem;
+    }
+
+    .dibujo{
+        height: 25rem;
+        width: 25rem;
+        background-image: url(/Muñeco.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: 15rem;
+        margin-left: 3rem
+    }
+
+    .textoPrincipal{
+        font-size: 3rem;
+    }
+
+    .textoSecundario{
+        font-size: 2rem;
+    }
+
+    .textoEncriptado{
+        height: 86rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.github,
+.youtube,
+.tiktok{
+    width: 4rem;
+    height: 4rem;
+}
+
